@@ -6,6 +6,7 @@ let numberSet = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'];
 let specialCharSet = ['!', '@', '#', '$', '%', '^', '&', '*', '(', ')', '_', '?', ':'];
 generatorArray = [];
 
+//Creating initial function to run on the click event
 function userSelect() {
   var passLength = prompt("Select a number between 8 and 128");
   if (isNaN(passLength)) {
@@ -14,7 +15,7 @@ function userSelect() {
     alert("Entry too small");
   } else if (passLength > 128) {
     alert("Entry too large");
-  }; 
+  } else {
   //Need a way to loop back to first prompt if invalid input received
   var upperYes = confirm("Would you like to use uppercase letters?");
   if (upperYes == true) {
@@ -32,6 +33,7 @@ function userSelect() {
   if (specialYes == true) {
     generatorArray = generatorArray.concat(specialCharSet);
   };
+};
 
   //Need to add a clause that ensures at least on of these variables is true
   if (upperYes == false && lowerYes == false && numberYes == false && specialYes == false) {
@@ -58,5 +60,5 @@ function writePassword() {
 }
 
 // Add event listener to generate button
-generateBtn.addEventListener("click", writePassword);
+//generateBtn.addEventListener("click", writePassword);
 
