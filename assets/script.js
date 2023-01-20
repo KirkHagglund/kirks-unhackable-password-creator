@@ -15,8 +15,7 @@ function userSelect() {
     alert("Entry too small");
   } else if (passLength > 128) {
     alert("Entry too large");
-  } else {
-  //Need a way to loop back to first prompt if invalid input received
+  } else { //Wrapping the rest of this code in else function ensures that it only runs if given a valid input value
   var upperYes = confirm("Would you like to use uppercase letters?");
   if (upperYes == true) {
     generatorArray = generatorArray.concat(upperCaseSet);
@@ -33,7 +32,7 @@ function userSelect() {
   if (specialYes == true) {
     generatorArray = generatorArray.concat(specialCharSet);
   };
-};
+}; //At this point we have a valid value for passLength and have selected our characters to use 
 
   //Need to add a clause that ensures at least on of these variables is true
   if (upperYes == false && lowerYes == false && numberYes == false && specialYes == false) {
@@ -42,11 +41,17 @@ function userSelect() {
   //If condition is met, time to generate a password
 };
 
-//I need to make sure the passLength question loops for invalid input
-
 function generatePassword() {
   //I need to use the passLength, the generatorArray, and math.floor and math.random to pull 8 - 128 characters into a variable.
-}
+  //Need to create an array whose length is determined by passLength, and who's strings are constructed by math.floor and math.random 
+  //using generatorArray characters
+  /*let createdPassword = {
+    length: passLength,*/ //Can I use an object creation here?
+
+    /*character = Math.floor(Math.random * generatorArray.length);
+console.log(character);*/
+  };
+
 
 generateBtn.addEventListener("click", userSelect);
 
