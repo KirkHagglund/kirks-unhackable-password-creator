@@ -14,3 +14,14 @@ To interact with the webpage, click on the Generate Password button to receive a
 
 Website URL: http://kirkhagglund.github.io/kirks-unhackable-password-creator/
 
+'''md
+![A screenhot of the website](./assets/images/2023-01-20%20(4).png)
+'''
+
+## Credits
+
+To build the JavaScript portion of this website, I took full advantage of Ask BCS as well as the tutors scheduled through Team Calendly. Their assistance was crucial in helping me turn my ideas into practicable solutions. Thanks as well are owed to classmate Michael Frayne, who got me started with the idea for separate arrays containing character types. 
+
+## License
+
+MIT License Copyright (c) 2023 Kirk Hagglund
