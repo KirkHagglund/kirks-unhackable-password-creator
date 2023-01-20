@@ -14,11 +14,37 @@ function userSelect() {
     alert("Entry too small");
   } else if (passLength > 128) {
     alert("Entry too large");
-  }
+  }; 
+  //Need a way to loop back to first prompt if invalid input received
+  var upperYes = confirm("Would you like to use uppercase letters?");
+  if (upperYes == true) {
+    generatorArray = generatorArray.concat(upperCaseSet);
+  };
+  var lowerYes = confirm("Would you like to use lower case letters?");
+  if (lowerYes == true) {
+    generatorArray = generatorArray.concat(lowerCaseSet);
+  };
+  var numberYes = confirm("Would you like to use numbers?");
+  if (numberYes == true) {
+    generatorArray = generatorArray.concat(numberSet);
+  };
+  var specialYes = confirm("Would you like to use special characters?");
+  if (specialYes == true) {
+    generatorArray = generatorArray.concat(specialCharSet);
+  };
 
-  
+  //Need to add a clause that ensures at least on of these variables is true
+  if (upperYes == false && lowerYes == false && numberYes == false && specialYes == false) {
+    alert("You must pick at least one character type");
+  };
+  //If condition is met, time to generate a password
+};
+
+//I need to make sure the passLength question loops for invalid input
+
+function generatePassword() {
+  //I need to use the passLength, the generatorArray, and math.floor and math.random to pull 8 - 128 characters into a variable.
 }
-
 
 generateBtn.addEventListener("click", userSelect);
 
